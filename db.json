@@ -1,0 +1,69 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "Users": [
+    {
+      "id": "1",
+      "name": "Hello world",
+      "city": "Pune",
+      "country": "India"
+    },
+    {
+      "id": "2",
+      "name": "test",
+      "city": "test2",
+      "country": "test2"
+    },
+    {
+      "id": "3",
+      "name": "test3",
+      "city": "test3",
+      "country": "test3"
+    },
+    {
+      "id": "4",
+      "name": "test4",
+      "city": "test4",
+      "country": "test4"
+    },
+    {
+      "id": "5",
+      "name": "test5",
+      "city": "test5",
+      "country": "test5"
+    },
+    {
+      "id": "6",
+      "name": "test6",
+      "city": "test6",
+      "country": "test6"
+    },
+    {
+      "id": "7",
+      "name": "test7",
+      "city": "test7",
+      "country": "test7"
+    },
+    {
+      "id": "8",
+      "name": "test8",
+      "city": "test8",
+      "country": "test8"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
