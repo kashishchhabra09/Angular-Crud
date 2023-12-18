@@ -7,8 +7,8 @@ import { DataService } from './data.service';
 })
 export class AppComponent {
   title = 'CRUD APPLICATION';
-
-  pageSize=3
+  searchText:any
+  pageSize=4
   currentPage=1
 
   items: any = [];

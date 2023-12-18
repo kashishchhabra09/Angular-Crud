@@ -7,9 +7,11 @@ import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { DataService } from './data.service';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FilterPipe } from './filter.pipe';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

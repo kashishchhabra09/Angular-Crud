@@ -1,4 +1,64 @@
-<h1>{{title}}</h1>
+<div class="text-primary text-center " >
+  <h1>{{title}}</h1>
+
+</div>
+<hr />
+
+<div class="d-flex justify-content-center" >
+  <input [(ngModel)]="newItem.id" placeholder="Enter ID" />
+  <input [(ngModel)]="newItem.name" placeholder="Enter Name" />
+  <input [(ngModel)]="newItem.city" placeholder="Enter City" />
+  <input [(ngModel)]="newItem.country" placeholder="Enter Country" /> &nbsp;
+  <button class="btn btn-primary" (click)="addItem()">Add Item</button>
+</div>
+<br>
+
+<div *ngIf="editingItem.id">
+  <input [(ngModel)]="editingItem.id" placeholder="Enter name" />
+  <input [(ngModel)]="editingItem.name" placeholder="Enter name" />
+  <input [(ngModel)]="editingItem.city" placeholder="Enter City" />
+  <input [(ngModel)]="editingItem.country" placeholder="Enter Country " />
+  &nbsp;
+  <button class="btn btn-primary"  (click)="updateItem()">Update Item</button>
+</div>
+
+<br><br>
+<div class=" d-flex justify-content-center " >
+  <input  type="text" placeholder="Search Data" [(ngModel)]="searchText" >
+
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">City</th>
+      <th scope="col">Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items |filter:searchText  |paginate:{itemsPerPage:pageSize,currentPage:currentPage}  " >
+      <td >{{item.id}}</td>
+      <td >{{item.name}}</td>
+      <td >{{item.city}}</td>
+      <td >{{item.country}}</td>
+      
+      <button class="btn btn-primary" (click)="editItem(item)">Edit</button> &nbsp;
+      <button class="btn btn-danger"  (click)="deleteItem(item.id)">Delete</button>
+     
+    </tr>
+  </tbody>
+</table>
+
+<pagination-controls (pageChange)="currentPage=$event" ></pagination-controls>
+
+<div *ngFor="let item of items">
+
+</div>
+
+
+
+<!-- <h1>{{title}}</h1>
 <hr />
 
 <div>
@@ -48,7 +108,7 @@
 
 <div *ngFor="let item of items">
 
-</div>
+</div> -->
 <!-- <div *ngFor="let item of items">
   {{ item.name }}
   {{ item.id }}
