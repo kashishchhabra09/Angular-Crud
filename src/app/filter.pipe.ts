@@ -23,13 +23,14 @@ export class FilterPipe implements PipeTransform {
   
     if (filteredItems.length === 0) {
 
-      return [{ id: 'No data found', name: '', city: '', country: '' }];
+      return [{ id:' No Data Found ' }];
     }
   
     return filteredItems;
   }
 
 }
+
 
 
 
